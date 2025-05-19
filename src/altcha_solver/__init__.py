@@ -1,0 +1,1 @@
+from altcha_solver.solve import solve_challenge, solve_challenge_async
