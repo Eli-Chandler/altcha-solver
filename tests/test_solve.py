@@ -86,7 +86,7 @@ def test_real_challenge():
         challenge='a08ed07a5e2a1410156afd9d029afac60fa277d9fe509cddb27376f2e6ec82de',
         salt='5b539cff62e9d57e6f63c4e0?expires=1747634775',
         algorithm='SHA-256',
-        max=300_000,
+        max_n=300_000,
     )
 
     assert result is not None

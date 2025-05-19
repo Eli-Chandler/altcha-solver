@@ -1,14 +1,15 @@
 import hashlib
 import asyncio
+from typing import Optional
 
 def solve_challenge(
         challenge: str,
         salt: str,
         algorithm: str = 'SHA-256',
-        max: int = 1_000_000,
+        max_n: int = 1_000_000,
         start: int = 0
-) -> int:
-    for n in range(start, max + 1):
+) -> Optional[int]:
+    for n in range(start, max_n + 1):
         t = hash_challenge(salt, n, algorithm)
         if t == challenge:
             return n
